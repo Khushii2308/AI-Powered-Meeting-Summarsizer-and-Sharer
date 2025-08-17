@@ -85,16 +85,18 @@ function App() {
           </div>
         )}
 
-        <TranscriptUploader
-          onTranscriptChange={handleTranscriptChange}
-          onFileUpload={handleFileUpload}
-          transcript={state.transcript}
-        />
+        <div className="input-grid">
+          <TranscriptUploader
+            onTranscriptChange={handleTranscriptChange}
+            onFileUpload={handleFileUpload}
+            transcript={state.transcript}
+          />
 
-        <PromptInput
-          prompt={state.customPrompt}
-          onPromptChange={handlePromptChange}
-        />
+          <PromptInput
+            prompt={state.customPrompt}
+            onPromptChange={handlePromptChange}
+          />
+        </div>
 
         <button
           className="generate-btn"

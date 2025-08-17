@@ -2,8 +2,12 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+jest.mock('./services/geminiService', () => ({
+  generateSummary: jest.fn(async () => 'Mock summary'),
+  generateSummaryFromFile: jest.fn(async () => 'Mock summary from file'),
+}));
+
+test('renders app header', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByText(/AI Meeting Notes Summarizer/i)).toBeInTheDocument();
 });
