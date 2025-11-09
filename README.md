@@ -1,4 +1,4 @@
-#EchoNote :  AI Meeting Notes Summarizer
+# EchoNote :  AI Meeting Notes Summarizer
 
 A full-stack React application that uses Google's Gemini AI to generate intelligent summaries of meeting transcripts.
 
